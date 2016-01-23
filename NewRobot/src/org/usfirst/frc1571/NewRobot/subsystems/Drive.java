@@ -14,7 +14,7 @@ package org.usfirst.frc1571.NewRobot.subsystems;
 import org.usfirst.frc1571.NewRobot.RobotMap;
 import org.usfirst.frc1571.NewRobot.commands.*;
 import edu.wpi.first.wpilibj.*;
-
+import org.usfirst.frc1571.NewRobot.Robot;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 
@@ -46,8 +46,13 @@ public class Drive extends Subsystem {
     }
     
     public void takeJoystickInputs(Joystick mainStick) {
-    	robotDrive41.arcadeDrive(0.5, 0.5);
+    	if (Robot.reverse == true) {
+    		robotDrive41.arcadeDrive(-0.5, -0.5);
+    	} else{
+    		robotDrive41.arcadeDrive(0.5, 0.5);
+    	}
     }
+    
     
     public void stop() {
     	robotDrive41.drive(0, 0);
