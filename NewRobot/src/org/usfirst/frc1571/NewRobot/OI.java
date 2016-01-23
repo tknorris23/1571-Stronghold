@@ -67,14 +67,12 @@ public class OI {
         
         joystickButton1 = new JoystickButton(mainStick, 1);
         joystickButton1.whileHeld(new armUp());
-        joystickButton2 = new JoystickButton(mainStick, 2);
+        joystickButton2 = new JoystickButton(mainStick, 3);
         joystickButton2.whileHeld(new armDown());
-        joystickButton3 = new JoystickButton(mainStick, 3);
+        joystickButton3 = new JoystickButton(mainStick, 6);
         joystickButton3.whileHeld(new auxRun());
         joystickButton4 = new JoystickButton(mainStick, 4);
-        joystickButton4.whenPressed(new Reverse());
-        joystickButton5 = new JoystickButton(mainStick, 5);
-        joystickButton5.whenPressed(new Normal());
+        joystickButton5.toggleWhenPressed(new Reverse());
         
 
 	    
