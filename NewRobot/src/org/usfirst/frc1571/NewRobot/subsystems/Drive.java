@@ -47,13 +47,14 @@ public class Drive extends Subsystem {
     
     public void takeJoystickInputs(Joystick mainStick) {
     	if (Robot.reverse == true) {
-    		robotDrive41.arcadeDrive(-0.5, -0.5);
+    		robotDrive41.arcadeDrive(0.0,0.0);
     	} else{
-    		robotDrive41.arcadeDrive(0.5, 0.5);
+    		robotDrive41.arcadeDrive(mainStick);
     	}
     }
     
-    
+    //if sean sucks then quit robotics else stay in robotics but still have a bad time because sean still actually sucks
+    //jkjk all hail overlord yumsauce may his nutz live on forever, deez nuts
     public void stop() {
     	robotDrive41.drive(0, 0);
     }
