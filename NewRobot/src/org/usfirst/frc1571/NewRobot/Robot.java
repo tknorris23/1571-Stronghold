@@ -14,6 +14,7 @@ package org.usfirst.frc1571.NewRobot;
 import org.usfirst.frc1571.NewRobot.subsystems.AuxDrive;
 import org.usfirst.frc1571.NewRobot.subsystems.Drive;
 import org.usfirst.frc1571.NewRobot.subsystems.armMotor;
+import org.usfirst.frc1571.NewRobot.OI;
 import edu.wpi.first.wpilibj.vision.*;
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.DigitalInput;
@@ -88,12 +89,6 @@ public class Robot extends IterativeRobot {
     }
     
     public void OperatorControl() {
-    	while (limitSwitch1.get()) {
-    		Timer.delay(10);
-    	}
-    	while (limitSwitch2.get()) {
-    		Timer.delay(10);
-    	}
     	
     }
     public void disabledPeriodic() {

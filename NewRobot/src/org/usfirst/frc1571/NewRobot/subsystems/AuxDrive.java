@@ -26,8 +26,8 @@ public class AuxDrive extends Subsystem {
     }
     
     public void auxRun() {
-    	auxLeft.set(1.0);
-    	auxRight.set(-1.0);
+    	auxLeft.set(0.9);
+    	auxRight.set(-0.9);
     }
 }
 
