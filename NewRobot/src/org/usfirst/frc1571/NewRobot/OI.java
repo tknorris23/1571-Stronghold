@@ -87,6 +87,9 @@ public class OI {
         //joystickButton5.toggleWhenPressed(new Reverse());
         
         //mainStickRightX = new double(mainStick.getRawAxis(4));
+        
+        joystickButton5 = new JoystickButton(mainStick, 5);
+        joystickButton5.whileHeld(new runSucker());
 	    
        
 
